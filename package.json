@@ -1,0 +1,16 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "description": "Sergey Pogoryelov's blog",
+  "main": "build.js",
+  "repository": "https://github.com/sergeioff/blog.git",
+  "author": "Sergey Pogoryelov",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "node ."
+  },
+  "dependencies": {
+    "metalsmith": "^2.3.0"
+  }
+}
