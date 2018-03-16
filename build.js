@@ -1,5 +1,6 @@
 const metalsmith = require('metalsmith');
 const markdown = require('metalsmith-markdown');
+const layouts = require('metalsmith-layouts');
 
 metalsmith(__dirname)
     .metadata({
@@ -12,6 +13,10 @@ metalsmith(__dirname)
     .source('./src')
     .destination('./dist')
     .use(markdown())
+    .use(layouts({
+        directory: './layouts',
+        default: 'article.hbs'
+    }))
     .build((err) => {
         if (err) {
             console.error(err);
