@@ -11,12 +11,15 @@
     <h1> {{ site.name }}</h1>
 
     <ul>
-        {{#each posts}}
+        {{#each pagination.files}}
         <li>
-            <div><a href="{{ path }}">{{ title }}</a></div>
+            <div><a href={{path}}>{{ title }}</a></div>
             <div>{{ date }}</div>
         </li>
         {{/each}}
     </ul>
+
+    {{#if pagination.previous}}<a href={{site.baseUrl}}{{pagination.previous.path}}>Previous</a>{{/if}}
+    {{#if pagination.next}}<a href={{site.baseUrl}}{{pagination.next.path}}>Next</a>{{/if}}
 </body>
 </html>

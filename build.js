@@ -3,12 +3,16 @@ const markdown = require('metalsmith-markdown');
 const layouts = require('metalsmith-layouts');
 const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
+const pagination = require('metalsmith-pagination');
+
+const baseUrl = '/dist/';
 
 metalsmith(__dirname)
     .metadata({
         site: {
             name: 'blog',
-            description: 'site description'
+            description: 'site description',
+            baseUrl: baseUrl
         }
     })
     .clean(true)
@@ -21,10 +25,18 @@ metalsmith(__dirname)
             reverse: true
         }
     }))
+    .use(pagination({
+        'collections.posts': {
+            perPage: 5,
+            first: 'index.html',
+            path: 'page/:num/index.html',
+            layout: 'index.hbs'
+        }
+    }))
     .use(markdown())
     .use(permalinks({
         relative: false,
-        pattern: ':title'
+        pattern: 'posts/:title'
     }))
     .use(layouts({
         directory: './layouts',
