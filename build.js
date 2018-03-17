@@ -4,14 +4,17 @@ const layouts = require('metalsmith-layouts');
 const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
 const pagination = require('metalsmith-pagination');
+const feed = require('metalsmith-feed');
 
 const baseUrl = '/dist/';
 
 metalsmith(__dirname)
     .metadata({
         site: {
-            name: 'blog',
+            title: 'blog',
             description: 'site description',
+            url: 'localhost',
+            author: 'Sergey Pogoryelov',
             baseUrl: baseUrl
         }
     })
@@ -41,6 +44,9 @@ metalsmith(__dirname)
     .use(layouts({
         directory: './layouts',
         default: 'post.hbs'
+    }))
+    .use(feed({
+        collection: 'posts'
     }))
     .build((err) => {
         if (err) {
