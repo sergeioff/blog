@@ -6,7 +6,14 @@ const permalinks = require('metalsmith-permalinks');
 const pagination = require('metalsmith-pagination');
 const feed = require('metalsmith-feed');
 
-const baseUrl = '/dist/';
+let baseUrl = '/dist/';
+
+const baseUrlOverride = process.argv[2];
+if (baseUrlOverride !== undefined) {
+    baseUrl = baseUrlOverride;
+}
+
+console.log(`Base URL: "${baseUrl}"`);
 
 metalsmith(__dirname)
     .metadata({
@@ -33,7 +40,7 @@ metalsmith(__dirname)
             perPage: 5,
             first: 'index.html',
             path: 'page/:num/index.html',
-            layout: 'index.hbs'
+            layout: 'index.pug'
         }
     }))
     .use(markdown())
@@ -43,7 +50,7 @@ metalsmith(__dirname)
     }))
     .use(layouts({
         directory: './layouts',
-        default: 'post.hbs'
+        default: 'post.pug'
     }))
     .use(feed({
         collection: 'posts'

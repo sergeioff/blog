@@ -1,0 +1,31 @@
+doctype html
+|
+|
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title #{site.title}
+        meta(name='description', content=site.description)
+    body
+        h1 #{site.title}
+        |
+        |
+        ul
+            each post in pagination.files
+                li
+                    div
+                        a(href=`${site.baseUrl}${post.path}`) #{post.title}
+                    div
+                        p #{post.date.toLocaleDateString()}
+        |
+        |
+        |
+        if pagination.previous
+            a(href=`${site.baseUrl}${pagination.previous.path}`) Previous
+            |
+            |
+
+        if pagination.next
+            a(href=`${site.baseUrl}${pagination.next.path}`) Next
+            |
+            |
