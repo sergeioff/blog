@@ -5,6 +5,7 @@ const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
 const pagination = require('metalsmith-pagination');
 const feed = require('metalsmith-feed');
+const sass = require('metalsmith-sass');
 
 let baseUrl = '/dist/';
 
@@ -50,10 +51,14 @@ metalsmith(__dirname)
     }))
     .use(layouts({
         directory: './layouts',
-        default: 'post.pug'
+        default: 'post.pug',
+        pattern: '**/*.html'
     }))
     .use(feed({
         collection: 'posts'
+    }))
+    .use(sass({
+        outputDir: 'css/'
     }))
     .build((err) => {
         if (err) {
