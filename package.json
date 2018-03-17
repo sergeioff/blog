@@ -12,8 +12,12 @@
     "buildProduction": "node . /"
   },
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
     "jstransformer-pug": "^0.3.0",
     "metalsmith": "^2.3.0",
+    "metalsmith-browserify": "^1.0.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-feed": "^1.0.0",
     "metalsmith-layouts": "^2.1.0",

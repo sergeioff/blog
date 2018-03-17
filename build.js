@@ -6,6 +6,7 @@ const permalinks = require('metalsmith-permalinks');
 const pagination = require('metalsmith-pagination');
 const feed = require('metalsmith-feed');
 const sass = require('metalsmith-sass');
+const browserify = require('metalsmith-browserify');
 
 let baseUrl = '/dist/';
 
@@ -59,6 +60,12 @@ metalsmith(__dirname)
     }))
     .use(sass({
         outputDir: 'css/'
+    }))
+    .use(browserify({
+        entries: ['js/main.js'],
+        browserifyOptions: {
+            transform: [['babelify', {presets: ['env']}]]
+        }
     }))
     .build((err) => {
         if (err) {
