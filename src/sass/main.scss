@@ -1,7 +1,38 @@
-$color: red;
+@import "reset";
+@import "components/header";
+@import "components/posts";
+
+// .pagination {
+//     width: 30%;
+
+//     background: orange;
+//     display: flex;
+//     justify-content: space-between;
+
+//     & > a {
+//         width: 5em;
+//         background-color: #bebebe;
+//     }
+// }
+
+a {
+    color: #000;
+    text-decoration: none;
+}
 
 body {
-    a {
-        background-color: $color;
-    }
+    display: flex;
+    justify-content: center;
+
+    font-family: "Merriweather","PT Serif",Georgia,"Times New Roman",serif;
 }
+
+.posts-section {
+    margin-top: 1em;
+}
+
+.center-wrapper {
+    width: 80%;
+    max-width: 980px;
+}
+

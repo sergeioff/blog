@@ -1,0 +1,30 @@
+.posts-section {
+
+    .post {
+        margin-bottom: 1em;
+
+        .post__header {
+            .post__title {
+                display: block;
+                width: 100%;
+                font-size: 18pt;
+            }
+
+            .post__date {
+                margin-top: .5em;
+            }
+        }
+
+        .post__excerpt {
+            padding: 1em .5em 0;
+        }
+
+        .post__read-link {
+            margin-top: 1em;
+
+            a {
+                color: green;
+            }
+        }
+    }
+}
