@@ -1,42 +1,26 @@
-doctype html
-html(lang='en')
-    head
-        meta(charset='utf-8')
-        title #{site.title}
-        meta(name='description', content=site.description)
-        link(rel='stylesheet', href=`${site.baseUrl}css/main.css`)
-    body
-        div.center-wrapper
-            header.header
-                div.logo
-                    a(href='#') #{site.title}
-                nav.navigation
-                    ul
-                        li 
-                            a(href='#').navigation_active Posts
-                        li
-                            a(href='#') About
+extends layout.pug
 
-            section.posts-section
-                each post in pagination.files
-                    article.post
-                        div.post__header
-                            a(href=`${site.baseUrl}${post.path}`).post__title #{post.title}
+block content
+    section.posts-section
+        each post in pagination.files
+            article.post
+                div.post__header
+                    a(href=`${site.baseUrl}${post.path}`).post__title #{post.title}
 
-                            p.post__date #{post.date.toLocaleDateString('en-US')}
+                    p.post__date #{post.date.toLocaleDateString('en-US')}
 
-                        if post.excerpt
-                            div.post__excerpt
-                                p #{post.excerpt}
-                        
-                        div.post__read-link
-                            a(href=`${site.baseUrl}${post.path}`) Read
-                            
+                if post.excerpt
+                    div.post__excerpt
+                        p #{post.excerpt}
+                
+                div.post__read-link
+                    a(href=`${site.baseUrl}${post.path}`) Read
+                    
 
-            nav.pagination
-                if pagination.previous
-                    a(href=`${site.baseUrl}${pagination.previous.path}`).pagination__previous Previous
-                    //- a(href='#').pagination__current Page #{pagination.num}
+    nav.pagination
+        if pagination.previous
+            a(href=`${site.baseUrl}${pagination.previous.path}`).pagination__previous Previous
+            //- a(href='#').pagination__current Page #{pagination.num}
 
-                if pagination.next
-                    a(href=`${site.baseUrl}${pagination.next.path}`).pagination__next Next
+        if pagination.next
+            a(href=`${site.baseUrl}${pagination.next.path}`).pagination__next Next
