@@ -64,7 +64,7 @@ metalsmith(__dirname)
     .use(browserify({
         entries: ['js/main.js'],
         browserifyOptions: {
-            transform: [['babelify', {presets: ['env']}]]
+            transform: [['babelify', {presets: ['@babel/preset-env']}]]
         }
     }))
     .build((err) => {
