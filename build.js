@@ -8,7 +8,7 @@ const feed = require('metalsmith-feed');
 const sass = require('metalsmith-sass');
 const browserify = require('metalsmith-browserify');
 
-let baseUrl = '/dist/';
+let baseUrl = `${__dirname}/dist/`;
 
 const baseUrlOverride = process.argv[2];
 if (baseUrlOverride !== undefined) {
@@ -20,7 +20,7 @@ console.log(`Base URL: "${baseUrl}"`);
 metalsmith(__dirname)
     .metadata({
         site: {
-            title: 'My title',
+            title: 'my title',
             description: 'site description',
             url: 'localhost',
             author: 'Sergey Pogoryelov',

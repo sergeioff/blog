@@ -1,0 +1,54 @@
+@import "../mixins/_link";
+@import "../mixins/center-wrapper";
+@import "../variables";
+
+header {
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,0.2);
+
+    a {
+        @include link(black);
+
+        font-size: 1.5rem;
+
+        &.logo {
+            display: block;
+            font-size: 2rem;
+        }
+    }
+
+    nav {
+        @include center-wrapper();
+        text-align: center;
+        padding: 1rem;
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            .navigation_active {
+               //TODO
+            }
+        }
+
+        @media (min-width: 600px) {
+            display: flex;
+            justify-content: space-between;
+
+            ul {
+                li {
+                    margin-right: 1.5rem;
+                }
+
+                li:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        @media (max-width: 600px) {
+            ul {
+                justify-content: space-around;
+            }
+        }
+    }
+}

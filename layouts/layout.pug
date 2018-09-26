@@ -6,14 +6,13 @@ html(lang='en')
         meta(name='description', content=site.description)
         link(rel='stylesheet', href=`${site.baseUrl}css/main.css`)
     body
-        div.center-wrapper
-            header.header
-                div.logo
-                    a(href='#') #{site.title}
-                nav.navigation
-                    ul
-                        li 
-                            a(href='#').navigation_active Posts
-                        li
-                            a(href='#') About
+        header
+            nav
+                a.logo(href='#') #{site.title}
+                ul
+                    li 
+                        a(href='#').navigation_active posts
+                    li
+                        a(href='#') about
+        div
             block content

@@ -1,1 +1,7 @@
-@import "reset";
+@import "includes/_reset";
+@import "mixins/_link";
+@import "components/header";
+
+html {
+    font-size: 16px;
+}
