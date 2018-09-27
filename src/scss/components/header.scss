@@ -1,4 +1,4 @@
-@import "../mixins/_link";
+@import "../mixins/link";
 @import "../mixins/center-wrapper";
 @import "../variables";
 
@@ -12,12 +12,13 @@ header {
 
         &.logo {
             display: block;
-            font-size: 2rem;
+            padding: 1rem 0;
+            font-size: 1.5rem;
+            text-shadow: white 1px 0px 0px, white -1px 0px 0px;
         }
     }
 
     nav {
-        @include center-wrapper();
         text-align: center;
         padding: 1rem;
 

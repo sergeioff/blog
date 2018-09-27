@@ -1,7 +1,27 @@
 @import "includes/_reset";
-@import "mixins/_link";
+@import "variables";
+@import "mixins/link";
+@import "mixins/center-wrapper";
 @import "components/header";
 
 html {
     font-size: 16px;
+    font-family: $merriweather;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $lato;
+    line-height: 1.25;
+}
+
+article.post {
+    line-height: 1.5;
+}
+
+header nav, section.posts-section, nav.pagination {
+    @include center-wrapper();
+}
+
+nav.pagination {
+    margin-top: 2rem;
 }
