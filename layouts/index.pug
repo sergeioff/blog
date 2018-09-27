@@ -5,9 +5,9 @@ block content
         each post in pagination.files
             article.post
                 div.post__header
-                    a(href=`${site.baseUrl}${post.path}`).post__title #{post.title}
-
                     p.post__date #{post.date.toLocaleDateString('en-US')}
+                    a(href=`${site.baseUrl}${post.path}`).post__title 
+                        h3 #{post.title}
 
                 if post.excerpt
                     div.post__excerpt
