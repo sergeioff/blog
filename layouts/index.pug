@@ -19,8 +19,13 @@ block content
 
     nav.pagination
         if pagination.previous
-            a(href=`${site.baseUrl}${pagination.previous.path}`).pagination__previous Previous
-            //- a(href='#').pagination__current Page #{pagination.num}
+            a(href=`${site.baseUrl}${pagination.previous.path}`).pagination__previous.pagination_available Newer
+        else
+            a.pagination__previous.pagination_disabled Newer
+            
+        a.pagination__current Page #{pagination.num} of #{pagination.pages.length}
 
         if pagination.next
-            a(href=`${site.baseUrl}${pagination.next.path}`).pagination__next Next
+            a(href=`${site.baseUrl}${pagination.next.path}`).pagination__next.pagination_available Older
+        else
+            a.pagination__next.pagination_disabled Older
