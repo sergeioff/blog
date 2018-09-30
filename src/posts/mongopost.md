@@ -1,5 +1,5 @@
 ---
-title: 'Change MongoDB data directory in CentOS 7'
+title: 'Change me '
 date: 2018-03-18
 excerpt: 'excerpt text'
 ---

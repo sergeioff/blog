@@ -12,12 +12,33 @@ article.post {
 
     .post__header {
         .post__date {
+            font-size: 2rem;
+
+            @media screen and (min-width: $viewport-large) {
+                font-size: 1.75em;
+            }
+
             color: $date-color;
         }
 
         .post__title {
-            font-size: 2rem;
+            font-size: 8rem;
+
+            @media screen and (min-width: $viewport-large) {
+                font-size: 5em;
+            }
+
             font-weight: bold;
         }
+    }
+
+    .post__excerpt {
+        font-size: 2em;
+
+        @media screen and (min-width: $viewport-large) {
+            font-size: 1.75rem;
+        }
+
+        color: $main-text-color;
     }
 }

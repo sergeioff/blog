@@ -8,12 +8,21 @@ header {
     a {
         @include link(black);
 
-        font-size: 1.5rem;
+        font-size: 4rem;
+
+        @media screen and (min-width: $viewport-large) {
+            font-size: 2rem;
+        }
 
         &.logo {
             display: block;
             padding: 1rem 0;
-            font-size: 1.5rem;
+            font-size: 6rem;
+
+            @media screen and (min-width: $viewport-large) {
+                font-size: 3rem;
+            }
+
             text-shadow: white 1px 0px 0px, white -1px 0px 0px;
         }
     }
@@ -31,13 +40,13 @@ header {
             }
         }
 
-        @media (min-width: 600px) {
+        @media (min-width: $viewport-large) {
             display: flex;
             justify-content: space-between;
 
             ul {
                 li {
-                    margin-right: 1.5rem;
+                    margin-right: 3rem;
                 }
 
                 li:last-child {
@@ -46,7 +55,7 @@ header {
             }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: $viewport-large) {
             ul {
                 justify-content: space-around;
             }

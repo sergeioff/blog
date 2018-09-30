@@ -4,17 +4,18 @@ block content
     section.posts-section
         each post in pagination.files
             article.post
-                div.post__header
-                    p.post__date #{post.date.toLocaleDateString('en-US')}
-                    a(href=`${site.baseUrl}${post.path}`).post__title 
-                        h3 #{post.title}
+                a(href=`${site.baseUrl}${post.path}`)
+                    div.post__header
+                        p.post__date #{post.date.toLocaleDateString('en-US')}
+                        //- a(href=`${site.baseUrl}${post.path}`).post__title 
+                        h3.post__title #{post.title}
 
-                if post.excerpt
-                    div.post__excerpt
-                        p #{post.excerpt}
-                
-                //- div.post__read-link
-                //-     a(href=`${site.baseUrl}${post.path}`) Read
+                    if post.excerpt
+                        div.post__excerpt
+                            p #{post.excerpt}
+                    
+                    //- div.post__read-link
+                    //-     a(href=`${site.baseUrl}${post.path}`) Read
                     
 
     nav.pagination

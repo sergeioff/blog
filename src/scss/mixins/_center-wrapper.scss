@@ -1,9 +1,12 @@
+@import "../variables";
+
 @mixin center-wrapper {
     margin: 0 auto;
 
     width: 95%;
 
-    @media (min-width: 600px) {
+    @media (min-width: $viewport-large) {
         width: 80%;
+        max-width: 800px;
     }
 }

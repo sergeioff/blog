@@ -10,14 +10,19 @@ nav.pagination {
     a {
         @include link(black);
 
-        padding: 1rem;
+        padding: 2rem;
 
         font-family: $lato;
+        font-size: 5rem;
+
+        @media screen and (min-width: $viewport-large) {
+            font-size: 2em;
+        }
 
         &.pagination__previous, &.pagination__next {
             background-color: #fafafa;
             @include transition(all 0.2s ease-in-out);
-            border-radius: 0.1875em;
+            border-radius: .75rem;
             border: 1px solid #f3f3f3;
         }
 
