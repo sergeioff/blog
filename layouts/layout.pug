@@ -6,7 +6,8 @@ html(lang='en')
         meta(name='description', content=site.description)
         link(rel='stylesheet', href=`${site.baseUrl}css/main.css`)
         link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato|Merriweather')
-    body
+    body.site
+    div.site-wrap
         header
             nav
                 a.logo(href='#') #{site.title}
@@ -17,3 +18,6 @@ html(lang='en')
                         a(href='#') About
         main
             block content
+
+    footer
+        div My footer

@@ -5,6 +5,7 @@
 @import "components/header";
 @import "components/post";
 @import "components/pagination";
+@import "components/footer.scss";
 
 html {
     font-size: 62.5%;
@@ -24,6 +25,6 @@ header nav, section.posts-section, nav.pagination {
     @include center-wrapper();
 }
 
-nav.pagination {
+nav.pagination, footer {
     margin-top: 2rem;
 }
