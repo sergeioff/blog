@@ -10,12 +10,12 @@ html(lang='en')
     div.site-wrap
         header
             nav
-                a.logo(href='#') #{site.title}
+                a.logo(href=`${site.baseUrl}`) #{site.title}
                 ul
                     li 
-                        a(href='#').navigation_active Posts
+                        a(href=`${site.baseUrl}`).navigation_active Posts
                     li
-                        a(href='#') About
+                        a(href=`${site.baseUrl}`) About
         main
             block content
 
