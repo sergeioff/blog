@@ -51,7 +51,7 @@ metalsmith(__dirname)
         pattern: 'posts/:title'
     }))
     .use(layouts({
-        directory: './layouts',
+        directory: './src/layouts',
         default: 'post.pug',
         pattern: '**/*.html'
     }))
