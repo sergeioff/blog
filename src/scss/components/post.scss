@@ -13,6 +13,7 @@ article.post {
     .post__header {
         .post__date {
             font-size: 2rem;
+            font-style: italic;
 
             @media screen and (min-width: $viewport-large) {
                 font-size: 1.75em;
