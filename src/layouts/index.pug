@@ -6,7 +6,7 @@ block content
             article.post
                 a(href=`${site.baseUrl}${post.path}`)
                     div.post__header
-                        p.post__date #{post.date.toLocaleDateString('en-US')}
+                        time.post__date #{post.date.toLocaleDateString('en-US', {day: 'numeric', month: 'long', year: 'numeric'})}
                         //- a(href=`${site.baseUrl}${post.path}`).post__title 
                         h3.post__title #{post.title}
 
