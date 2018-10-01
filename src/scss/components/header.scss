@@ -3,10 +3,10 @@
 @import "../variables";
 
 header {
-    box-shadow: 0 2px 2px -2px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 4px -2px rgba(0,0,0,0.2);
 
     a {
-        @include link(black);
+        @include link($main-text-color);
 
         font-size: 4rem;
 
@@ -16,8 +16,11 @@ header {
 
         &.logo {
             display: block;
-            padding: 1rem 0;
+            padding: 2rem 0;
             font-size: 6rem;
+            font-family: $font-heading;
+
+            color: $black-text-color;
 
             @media screen and (min-width: $viewport-large) {
                 font-size: 3rem;

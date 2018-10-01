@@ -3,17 +3,18 @@
 @import "mixins/link";
 @import "mixins/center-wrapper";
 @import "components/header";
-@import "components/post";
 @import "components/pagination";
 @import "components/footer.scss";
+@import "components/posts";
+@import "components/single-post.scss";
 
 html {
     font-size: 62.5%;
-    font-family: $merriweather;
+    font-family: $font-text;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $lato;
+    font-family: $font-heading;
     line-height: 1.25;
 }
 

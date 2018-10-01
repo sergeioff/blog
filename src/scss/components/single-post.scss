@@ -1,0 +1,85 @@
+@import "../variables";
+@import "../mixins/center-wrapper";
+
+.single-post__date {
+    margin: 5rem 0;
+
+    line-height: 1.5;
+    font-size: 1.5rem;
+
+    text-align: center;
+    color: $date-color;
+
+    span {
+        font-style: italic;
+    }
+}
+
+h1.title {
+    font-size: 10em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4rem;
+
+    &:after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        border-top: 1rem solid $main-text-color;
+        width: 15rem;
+    }
+}
+
+article.single-post {
+    @include center-wrapper();
+
+    line-height: 1.25;
+    font-family: $font-text;
+    font-size: 1.5rem;
+
+    color: $main-text-color;
+
+    p {
+        text-align: justify;
+        
+        margin: 3rem 0;
+    }
+
+    h1, h2, h3, h4 {
+        margin: 2rem 0;
+        font-weight: bold;
+        color: $black-text-color;
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    ol, ul {
+        margin-block-start: 2rem;
+        margin-block-end: 2rem;
+
+        list-style-position: inside;
+        padding-inline-start: 4rem;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+}

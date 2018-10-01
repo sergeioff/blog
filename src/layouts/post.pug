@@ -1,4 +1,11 @@
 extends layout.pug
 
 block content
-    article.post!= contents
+    div.single-post__date 
+        span Written on 
+        br
+        time #{date.toLocaleDateString('en-US', {day: 'numeric', month: 'long', year: 'numeric'})}
+
+    h1.title #{title}
+
+    article.single-post!= contents
