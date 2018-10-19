@@ -20,6 +20,8 @@
 }
 
 h1.title {
+    @include center-wrapper();
+
     font-size: 10rem;
     text-align: center;
     font-weight: bold;
