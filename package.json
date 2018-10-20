@@ -8,8 +8,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "node .",
-    "buildProduction": "node . /"
+    "build": "node . /",
+    "buildDev": "node ."
   },
   "dependencies": {
   },
