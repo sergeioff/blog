@@ -1,6 +1,7 @@
 @import "../variables";
 @import "../mixins/center-wrapper";
 @import "../mixins/link";
+@import "../animations";
 
 .single-post__date {
     margin: 5rem 0;
@@ -18,6 +19,8 @@
     span {
         font-style: italic;
     }
+
+    animation: 1s 0s fadeInDown;
 }
 
 h1.title {
@@ -41,6 +44,8 @@ h1.title {
         border-top: 1rem solid $black-text-color;
         width: 15rem;
     }
+
+    animation: 1s 0s fadeInDown;
 }
 
 article.single-post {
