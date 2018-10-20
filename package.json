@@ -9,7 +9,8 @@
   "private": true,
   "scripts": {
     "build": "node . /",
-    "buildDev": "node ."
+    "buildDev": "node .",
+    "buildGit": "node . /blog/"
   },
   "dependencies": {
   },
