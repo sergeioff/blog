@@ -1,5 +1,6 @@
 @import "../variables";
 @import "../mixins/center-wrapper";
+@import "../mixins/link";
 
 .single-post__date {
     margin: 5rem 0;
@@ -9,7 +10,7 @@
     }
 
     line-height: 1.5;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 
     text-align: center;
     color: $date-color;
@@ -27,6 +28,8 @@ h1.title {
     font-weight: bold;
     margin-bottom: 4rem;
 
+    line-height: 1;
+
     @media screen and (min-width: $viewport-large) {
         font-size: 6rem;
     }
@@ -34,7 +37,7 @@ h1.title {
     &:after {
         content: '';
         display: block;
-        margin: 0 auto;
+        margin: 2rem auto;
         border-top: 1rem solid $black-text-color;
         width: 15rem;
     }
@@ -45,7 +48,7 @@ article.single-post {
 
     line-height: 1.25;
     font-family: $font-text;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 
     color: $main-text-color;
 
@@ -95,5 +98,52 @@ article.single-post {
 
     ul {
         list-style-type: disc;
+    }
+
+    li > ul {
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 1rem;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    a {
+        @include link($external-link-color);
+    }
+
+    table {
+
+        @media screen and (max-width: $viewport-large) {
+            font-size: 2em;
+        }
+
+        margin: 0 auto;
+
+        th {
+            font-weight: bold;
+            text-align: left;
+        }
+
+        th, td {
+            border-bottom: 1px solid $table-border-color;
+            padding: 1rem 2rem;
+        }
+
+        tr:nth-child(2n) {
+            background-color: #f2f2f2;
+        }
     }
 }
