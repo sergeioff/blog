@@ -152,3 +152,38 @@ article.single-post {
         }
     }
 }
+
+.mail-subscription {
+    @include center-wrapper();
+    background: #f7f7f7;
+    border-radius: 1rem;
+    text-align: center;
+
+    box-shadow: 0 4px 13px -2px rgba(0,0,0,0.2);
+
+    h4 {
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+
+    .email-input {
+        display: inline;
+        position: relative;
+    }
+
+    #mce-EMAIL {
+        width: 90%;
+        padding: 1rem;
+        border: none;
+        border-radius: .75rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #mc-embedded-subscribe {
+        margin: .5rem;
+        padding: 1rem;
+        border: none;
+        border-radius: 1rem;
+    }
+}
