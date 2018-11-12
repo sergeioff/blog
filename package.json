@@ -15,19 +15,19 @@
   "dependencies": {
   },
   "devDependencies": {
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
     "babelify": "^10.0.0",
     "jstransformer-pug": "^0.3.0",
     "metalsmith": "^2.3.0",
     "metalsmith-browserify": "^1.0.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-feed": "^1.0.0",
-    "metalsmith-layouts": "^2.1.0",
-    "metalsmith-markdown": "^1.0.1",
+    "metalsmith-layouts": "^2.3.0",
+    "metalsmith-markdown": "^1.1.0",
     "metalsmith-pagination": "^1.4.0",
-    "metalsmith-permalinks": "^1.0.0",
+    "metalsmith-permalinks": "^2.0.0",
     "metalsmith-sass": "^1.5.1",
-    "yarn": "^1.9.4"
+    "yarn": "^1.12.3"
   }
 }
