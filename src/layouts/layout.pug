@@ -3,9 +3,9 @@ html(lang='en')
     head
         meta(charset='utf-8')
         if title
-            title #{title} - #{site.title}
+            title #{title} - #{site.description}
         else
-            title #{site.title}
+            title #{site.description}
         meta(name='description', content=site.description)
         link(rel='stylesheet', href=`${site.baseUrl}css/main.css`)
         link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato|Roboto')
