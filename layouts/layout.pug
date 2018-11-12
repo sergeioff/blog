@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        if title
+            title #{title} - #{site.title}
+        else
+            title #{site.title}
+        meta(name='description', content=site.description)
+        link(rel='stylesheet', href=`${site.baseUrl}css/main.css`)
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato|Roboto')
+    body.site
+    div.site-wrap
+        header
+            nav
+                a.logo(href=`${site.baseUrl}`) #{site.title}
+                ul
+                    li 
+                        a(href=`${site.baseUrl}`).navigation_active Posts
+                    li
+                        a(href=`${site.baseUrl}`) About
+        main
+            block content
+
+    footer
+        div
+            a(href='https://www.linkedin.com/in/sergeioff/') LinkedIn

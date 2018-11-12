@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+    div.single-post__date 
+        span Written on 
+        br
+        time #{date.toLocaleDateString('en-US', {day: 'numeric', month: 'long', year: 'numeric'})}
+
+    h1.title #{title}
+
+    article.single-post!= contents
+
+    div.mail-subscription
+        include includes/mailchimp.pug
