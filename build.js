@@ -20,7 +20,7 @@ console.log(`Base URL: "${baseUrl}"`);
 metalsmith(__dirname)
     .metadata({
         site: {
-            title: 'Sergey Pogorelov',
+            title: "Sergey Pogorelov's blog",
             description: "Sergey Pogorelov's blog",
             url: 'sergeioff.github.io/blog/',
             author: 'Sergey Pogorelov',
