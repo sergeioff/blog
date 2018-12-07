@@ -6,15 +6,15 @@ Nowadays a lot of people are interested in becoming a software developer. Some o
 ---
 Nowadays a lot of people are interested in becoming a software developer. Some of them love computers and technologies and some of them just want to switch their job to a better paid one. The amount of software development courses and boot camps are instantly growing and there are more and more developers.
 
-Nevertheless, the demand for developers is pretty high. IT companies are constantly looking for new developers. But they're looking for *professionals* who *passionate* about their job.
+Nevertheless, the demand for developers is pretty high. IT companies are constantly looking for new developers. But they're looking for professionals who passionate about their job.
 
 There are developers who work just for a paycheck and care only about the number of monitors they can have. Usually, they stuck somewhere in low positions doing stuff that they don't like and with fear to be fired.
 
 I want you to ask yourself "**Why am I want to be a software developer?**". Stop reading, take a few minutes, write-down answer for this question.
 
-If the answer is *"just money"* you may be surprised but there are a lot of other opportunities that might be much more lucrative.
+If the answer is "just money" you may be surprised but there are a lot of other opportunities that might be much more lucrative.
 
-Becoming a developer is a long way, hence I suggest you proceed only if you are *curious* about it or have *passion*. That's the things that'll help you to go through the long path of learning (which might *never end* and that's *good*).
+Becoming a developer is a long way, hence I suggest you proceed only if you are curious about it or have passion. That's the things that'll help you to go through the long path of learning (which might never end and that's good).
 
 You still here? Let's go to the learning process!
 
@@ -69,7 +69,7 @@ The good scenario is to combine practical and theoretical knowledge, so try to f
 # Know the basics
 
 No matter what technology you’ll choose you'll need to know the basics.
-Most of the programming languages are *C-like* languages, hence if you know one programming language you’ll be comfortable working with other languages.
+Most of the programming languages are C-like languages, hence if you know one programming language you’ll be comfortable working with other languages.
 
 If you have the time it’ll be good to start from [**CS50**](https://en.wikipedia.org/wiki/CS50) course.
 
