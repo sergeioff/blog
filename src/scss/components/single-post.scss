@@ -63,6 +63,10 @@ article.single-post {
         margin: 3rem 0;
     }
 
+    li > p {
+        margin: 1rem 0;
+    }
+
     h1, h2, h3, h4 {
         margin: 2rem 0;
         font-weight: bold;
@@ -93,7 +97,6 @@ article.single-post {
         margin-block-start: 2rem;
         margin-block-end: 2rem;
 
-        list-style-position: inside;
         padding-inline-start: 4rem;
     }
 
@@ -129,7 +132,7 @@ article.single-post {
         @include link($external-link-color);
     }
 
-    table {
+    & > table {
 
         @media screen and (max-width: $viewport-large) {
             font-size: 2em;
@@ -150,6 +153,18 @@ article.single-post {
         tr:nth-child(2n) {
             background-color: #f2f2f2;
         }
+    }
+
+    pre {
+        white-space: pre-wrap;       /* Since CSS 2.1 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
+
+    code {
+        display: block;
+        padding: 1rem;
+        background-color: #f2f2f2;
+        border-radius: .25rem;
     }
 }
 
