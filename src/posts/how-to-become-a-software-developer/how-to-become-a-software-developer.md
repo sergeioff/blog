@@ -72,6 +72,7 @@ No matter what technology you’ll choose you'll need to know the basics.
 Most of the programming languages are C-like languages, hence if you know one programming language you’ll be comfortable working with other languages.
 
 If you have the time it’ll be good to start from [**CS50**](https://en.wikipedia.org/wiki/CS50) course.
+You can watch lectures [on their YouTube channel](https://www.youtube.com/playlist?list=PLhQjrBD2T382eX9-tF75Wa4lmlC7sxNDH).
 
 Also as a faculty reading, I’d suggest [**Code: The Hidden Language of Computer Hardware and Software**](https://www.amazon.com/Code-Language-Computer-Hardware-Software/dp/0735611319) by  Charles Petzold. It won’t teach you how to write code but that’s a good book that may give you some intel on how computers and programming languages were created.
 
