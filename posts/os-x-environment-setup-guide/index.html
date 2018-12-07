@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>OS X environment setup guide - Sergey Pogorelov's blog</title><meta name="description" content="Sergey Pogorelov's blog"><link rel="stylesheet" href="/blog/css/main.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Roboto"></head><body class="site"></body><div class="site-wrap"><header><nav><a class="logo" href="/blog/">Sergey Pogorelov</a><ul><li> <a class="navigation_active" href="/blog/">Posts</a></li><li><a href="/blog/">About</a></li></ul></nav></header><main><div class="single-post__date"> <span>Written on </span><br><time>December 7, 2018</time></div><h1 class="title">OS X environment setup guide</h1><article class="single-post"><p>When I used Ubuntu as my main system I experimented a lot and often reinstalled the system. I’ve got to the conclusion that it might be handy to have a list of steps to do after a fresh system install.</p>
+<p>Initially, I took a textbook and wrote down applications that I’ll need to install on a fresh system. With time I’ve decided to create a guide and put it to my GitHub. It stills <a href="https://github.com/sergeioff/ubuntu-post-install">there</a>. After all, I’ve realized that it’s possible to create a few scripts that will install everything for me.</p>
+<p>Currently, I’m using OS X so I’ve decided to do the same script and guide for OS X.</p>
+<h2 id="tldr">TLDR</h2>
+<ul>
+<li><p>My post-install script:</p>
+<script src="https://gist.github.com/sergeioff/8cdb48d3fac3ca60d3f09e66d7a6b3df.js"></script></li>
+<li><p>My .zshrc config:</p>
+<script src="https://gist.github.com/sergeioff/7e4447dcef3b02648726936a32938018.js"></script>
+</li>
+<li><p>install <a href="https://nodejs.org/en/">Node.js</a></p>
+<ul>
+<li>install Yarn package manager:<pre><code>sudo npm i -g yarn</code></pre></li>
+</ul>
+</li>
+<li><p>install fixed font for terminal from
+<a href="https://github.com/adobe-fonts/source-code-pro/releases/tag/variable-fonts">https://github.com/adobe-fonts/source-code-pro/releases/tag/variable-fonts</a></p>
+</li>
+<li><p>iTerm2 profile setup</p>
+<ul>
+<li>Select Solarized dark color scheme:
+<img src="color.png" alt="Color scheme selection tab"></li>
+<li>Select Source Code Variable Italic font:
+<img src="font.png" alt="Font selection"></li>
+<li>Load natural text editing preset:
+<img src="text-editing-preset.png" alt="Load text editing preset"></li>
+</ul>
+</li>
+<li><p>In system settings:</p>
+<ul>
+<li>Show battery percentage</li>
+<li>Use stacks on Desktop</li>
+<li>Disable Bluetooth</li>
+<li>Link Google account (for calendar)</li>
+<li>Disable &quot;Show recent applications in Dock&quot;</li>
+<li>Show everything in Finder sidebar
+<img src="finder.png" alt="Finder sidebar settings"></li>
+</ul>
+</li>
+</ul>
+<p>This way simplifies a new environment setup and saves a lot of time since almost everything is automatized.</p>
+</article><div class="mail-subscription"><div id="mc_embed_signup"><form action="https://pogorelovs.us19.list-manage.com/subscribe/post?u=142dd8f8b60869d2d72caa67d&amp;amp;id=06768ce50e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate><div id="mc_embed_signup_scroll"><h4>Like what you read? Subscribe to my new articles!</h4><div class="email-input"><input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Your email address" required><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_142dd8f8b60869d2d72caa67d_06768ce50e" tabindex="-1" value=""></div><div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"></div></div></div></form></div></div></main></div><footer><div><a href="https://www.linkedin.com/in/sergeioff/">LinkedIn</a></div></footer></html>
