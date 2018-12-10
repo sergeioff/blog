@@ -1,5 +1,6 @@
 @import "../variables";
 @import "../mixins/link";
+@import "../mixins/transition";
 
 article.post {
     margin: 1rem 0;
@@ -16,7 +17,7 @@ article.post {
             font-style: italic;
 
             @media screen and (min-width: $viewport-large) {
-                font-size: 1.75em;
+                font-size: 1.75rem;
             }
 
             color: $date-color;
@@ -26,7 +27,7 @@ article.post {
             font-size: 8rem;
 
             @media screen and (min-width: $viewport-large) {
-                font-size: 4em;
+                font-size: 4rem;
             }
 
             font-weight: bold;
@@ -34,12 +35,33 @@ article.post {
     }
 
     .post__excerpt {
-        font-size: 2em;
+        font-size: 2rem;
 
         @media screen and (min-width: $viewport-large) {
             font-size: 1.75rem;
         }
 
         color: $main-text-color;
+    }
+
+    .post__read-link {
+        display: flex;
+        flex-direction: row-reverse;
+
+        & > a {
+            padding: 1rem 2.5rem;
+            font-size: 1.5em;
+            background-color: #fafafa;
+            @include transition(all 0.2s ease-in-out);
+            border-radius: .75rem;
+            border: 1px solid #f3f3f3;
+
+            box-shadow: 0 1px 4px -1px rgba(0,0,0,0.2);
+
+            &:hover, &:focus {
+                background: white;
+                color: #477dca;
+            }
+        }
     }
 }
