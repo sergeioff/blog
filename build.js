@@ -8,7 +8,7 @@ const feed = require('metalsmith-feed');
 const sass = require('metalsmith-sass');
 const browserify = require('metalsmith-browserify');
 
-let baseUrl = `${__dirname}/dist/`;
+let baseUrl = `/`;
 
 const baseUrlOverride = process.argv[2];
 if (baseUrlOverride !== undefined) {
