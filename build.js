@@ -22,7 +22,7 @@ metalsmith(__dirname)
         site: {
             title: "Sergey Pogorelov",
             description: "Sergey Pogorelov's blog",
-            url: 'sergeioff.github.io/blog/',
+            url: 'pogorelovs.com',
             author: 'Sergey Pogorelov',
             baseUrl: baseUrl
         }
