@@ -1,0 +1,45 @@
+---
+title: 'Playing with MSK kafka'
+date: 2020-01-04
+excerpt: "When you work with MSK you might want to connect with local producer/consumer to it for the test purposes, but you should keep in mind that MSK (as all AWS services) requires connection through SSL and here you'll need to specify it in your Kafka client..."
+---
+When you work with MSK you might want to connect with local producer/consumer to it for the test purposes, but you should keep in mind that MSK (as all AWS services) requires connection through SSL and here you'll need to specify it in your Kafka client.
+
+In order to connect to your msk with local consumer/producer:
+1. Download [Kafka binaries](https://kafka.apache.org/downloads) and extract them
+2. Copy cacerts from you Java dir
+```
+cp /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/security/cacerts ~/software/kafka.client.truststore.jks
+```
+3. Create `client.properties` with following contents and point it to file that you've copied in step 2:
+```
+security.protocol=SSL
+ssl.truststore.location=/home/ubuntu/software/kafka_2.11-2.4.0/bin/kafka.client.truststore.jks
+```
+4. Now you can run your consumer/producer:
+
+You can get the $BOOTSTRAP_SERVERS via the aws-cli:
+```
+aws kafka get-bootstrap-brokers --cluster-arn $ClusterArn
+```
+
+In order to get the ClusterArn you might need to list the available MSK clusters and get their details
+
+```
+aws emr list-clusters --region $REGION
+aws emr describe-cluster --region $REGION --cluster-id $CLUSTER_ID
+```
+
+Keep in mind that you'll need the *BootstrapBrokerStringTls* (usually ends with port 9094) in order to connect through SSL.
+
+**Running the Consumer**
+```
+$KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS --consumer.config client.properties --topic $TOPIC_NAME
+```
+
+**Running the Producer**
+```
+$KAFKA_HOME/bin/kafka-console-producer.sh --broker-list $BOOTSTRAP_SERVERS --producer.config client.properties --topic $TOPIC_NAME
+```
+
+Now you can consume and produce message via the local Kafka binaries to you MSK cluster.
