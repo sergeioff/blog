@@ -1,3 +1,8 @@
+language: node_js
+before_script:
+  - npm install -g gatsby
+node_js:
+  - "10"
 deploy:
   provider: pages
   skip_cleanup: true
