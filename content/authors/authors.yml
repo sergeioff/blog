@@ -1,0 +1,8 @@
+- name: Sergey Pogorelov
+  bio: |
+    A handyman from the web-development world. Lifelong learning software developer. Passionate about Web technologies (specializes in Spring and Big Data)
+  avatar: ./avatars/sergey-pogorelov.jpg
+  social:
+    - url: https://github.com/sergeioff
+    - url: https://www.linkedin.com/in/sergeioff
+  featured: true
