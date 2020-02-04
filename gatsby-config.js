@@ -2,11 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `Sergey Pogorelov's blog`,
     name: `Pogorelovs`,
-    siteUrl: `https://novela.narative.co`,
+    siteUrl: `http://pogorelovs.com`,
     description: `Sergey Pogorelov's blog`,
     hero: {
-      heading: `Welcome to my blog,
-      here I write my thoughts and notes about the development.`,
+      heading: `Welcome to my blog, here I write my thoughts and notes about the development.`,
       maxWidth: 640,
     },
     social: [
