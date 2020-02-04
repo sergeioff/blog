@@ -31,6 +31,7 @@ module.exports = {
           local: true,
           // contentful: true,
         },
+        mailchimp: true,
       },
     },
     {
@@ -45,6 +46,12 @@ module.exports = {
         icon: `src/assets/favicon.png`,
       },
     },
-    'gatsby-plugin-cname'
+    'gatsby-plugin-cname',
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint: 'https://pogorelovs.us19.list-manage.com/subscribe/post?u=142dd8f8b60869d2d72caa67d&amp;id=06768ce50e',
+      },
+    },
   ],
 };
