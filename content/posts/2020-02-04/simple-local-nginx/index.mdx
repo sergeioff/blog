@@ -1,0 +1,29 @@
+---
+title: Simple local Nginx
+author: Sergey Pogorelov
+date: 2020-02-04
+hero: ./images/nginx.png
+excerpt: It's preety simple to run a local Nginx web server for test purposes...
+---
+
+It's preety simple to run a local Nginx web server for test purposes.
+
+First of all we need to pull the Nginx docker image
+
+```shell
+docker pull nginx
+```
+
+Now we can run it:
+
+```shell
+docker run \
+--name blog-nginx \
+-p 80:80 \
+-v ~/Git/blog/dist/:/usr/share/nginx/html:ro \
+-d nginx
+```
+
+Here we specify port forwarding with the **-p** option and mount the web directory for Nginx through the **-v** option.
+
+That's it, now we have a running Nginx that serves our content.
