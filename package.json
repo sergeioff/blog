@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build && gh-pages -d public -r https://$GITHUB_TOKEN@github.com/sergeioff/blog.git"
   },
   "dependencies": {
     "@narative/gatsby-theme-novela": "^0.*",
@@ -14,5 +15,8 @@
     "gatsby-plugin-manifest": "^2.2.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
