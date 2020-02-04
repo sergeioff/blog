@@ -4,7 +4,7 @@
 My personal blog where I write my thoughts and notes about the development.
 
 ## Live
-pogorelovs.com
+https://pogorelovs.com
 
 ## Development
 ```
