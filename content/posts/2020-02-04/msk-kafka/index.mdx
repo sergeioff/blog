@@ -39,17 +39,17 @@ Keep in mind that you'll need the *BootstrapBrokerStringTls* (usually ends with 
 
 **Running the Consumer**
 ```
-$KAFKA_HOME/bin/kafka-console-consumer.sh \ 
---bootstrap-server $BOOTSTRAP_SERVERS \ 
---consumer.config client.properties \ 
+$KAFKA_HOME/bin/kafka-console-consumer.sh \
+--bootstrap-server $BOOTSTRAP_SERVERS \
+--consumer.config client.properties \
 --topic $TOPIC_NAME
 ```
 
 **Running the Producer**
 ```
-$KAFKA_HOME/bin/kafka-console-producer.sh \ 
---broker-list $BOOTSTRAP_SERVERS \ 
---producer.config client.properties \ 
+$KAFKA_HOME/bin/kafka-console-producer.sh \
+--broker-list $BOOTSTRAP_SERVERS \
+--producer.config client.properties \
 --topic $TOPIC_NAME
 ```
 
