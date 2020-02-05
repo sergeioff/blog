@@ -1,9 +1,9 @@
 ---
-title: FIXME OS X environment setup guide
+title: OS X environment setup guide
 author: Sergey Pogorelov
 date: 2018-12-07
 hero: ./images/mbp.jpg
-excerpt: TODO
+excerpt: When I used Ubuntu as my main system I experimented a lot and often reinstalled the system. I’ve got to the conclusion that it might be handy to have a list of steps to do after a fresh system install...
 ---
 
 When I used Ubuntu as my main system I experimented a lot and often reinstalled the system. I’ve got to the conclusion that it might be handy to have a list of steps to do after a fresh system install.
@@ -37,16 +37,16 @@ brew doctor
 # Disable Homebrew analytics
 brew analytics off
 
-brew install zsh autojump httpie tree gradle p7zip pstree
+brew install zsh autojump httpie tree gradle p7zip pstree nvm
 
 # Quick look plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json quicklook-c sv suspicious-package
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json quicklook-csv suspicious-package
 
 # Development software
 brew cask install java intellij-idea-ce visual-studio-code postman docker pycharm-ce dash sourcetree
 
 # Software
-brew cask install appcleaner dropbox google-backup-and-sync google-chrome transmission vlc calibre spotify slack
+brew cask install appcleaner google-chrome transmission vlc calibre spotify slack
 
 # Install zsh-syntax-higlighting plugin
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -67,9 +67,9 @@ plugins=(
   git
   autojump
   docker
-#  gradle
+  gradle
   httpie
-#  mvn
+  mvn
 #  ng
   npm
 #  vagrant
@@ -82,11 +82,11 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 ```
 
-- install [Node.js](https://nodejs.org/en/)
+- install [Node.js](https://nodejs.org/en/) through `nvm`
 	- install Yarn package manager:
-```
-sudo npm i -g yarn
-```
+    ```
+    sudo npm i -g yarn
+    ```
 
 - install fixed font for terminal from
 https://github.com/adobe-fonts/source-code-pro/releases/tag/variable-fonts
