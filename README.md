@@ -20,4 +20,4 @@ npx gatsby-cli build
 Travis CI does automaic deployment on any changes to the `gatsby` branch
 
 ## Contribution
-Fell free to open PR's
+Feel free to open PR's
