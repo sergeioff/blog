@@ -2,8 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `Sergey Pogorelov's blog`,
     name: `Pogorelovs`,
-    siteUrl: `http://pogorelovs.com`,
+    siteUrl: `https://pogorelovs.com`,
     description: `Sergey Pogorelov's blog`,
+    image: `src/assets/sergey-pogorelov.jpg`,
     hero: {
       heading: `Welcome to my blog, here I write my thoughts and notes about the development.`,
       maxWidth: 640,
