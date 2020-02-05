@@ -5,8 +5,8 @@ import React from 'react';
  * Make sure you have a height set for your logo.
  * It is recommended to keep the height within 25-35px.
  */
-export default function Logo() {
+export default function Logo(color) {
   return (
-    <h2>Pogorelovs</h2>
+    <h2 style={{fontFamily: 'Bangers', fontSize: '30pt', color: color.fill, letterSpacing: '.3rem'}}>Pogorelovs</h2>
   );
 }

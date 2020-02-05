@@ -53,5 +53,13 @@ module.exports = {
         endpoint: 'https://pogorelovs.us19.list-manage.com/subscribe/post?u=142dd8f8b60869d2d72caa67d&amp;id=06768ce50e',
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+        options: {
+          google: {
+            families: ['Bangers']
+        }
+      }
+    },
   ],
 };
