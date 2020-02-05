@@ -3,11 +3,10 @@ module.exports = {
     title: `Sergey Pogorelov's blog`,
     name: `Pogorelovs`,
     siteUrl: `https://pogorelovs.com`,
-    description: `Sergey Pogorelov's blog`,
-    image: `src/assets/sergey-pogorelov.jpg`,
+    description: `Place where I write my thoughts and notes about the development`,
     hero: {
-      heading: `Welcome to my blog, here I write my thoughts and notes about the development.`,
-      maxWidth: 640,
+      heading: `Place where I write my thoughts and notes about the development`,
+      maxWidth: 1200,
     },
     social: [
       {
