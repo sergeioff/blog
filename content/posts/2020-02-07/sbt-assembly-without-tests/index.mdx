@@ -1,0 +1,14 @@
+---
+title: Sbt assembly without tests
+author: Sergey Pogorelov
+date: 2020-02-07
+hero: ./images/sbt-logo.png
+excerpt: Sometimes it might be useful to run the `sbt assembly` without tests...
+---
+
+Sometimes it might be useful to run the `sbt assembly` without tests.
+You can just override the tests section and use command like this
+
+```shell
+sbt 'set test in assembly := {}' clean assembly
+```
