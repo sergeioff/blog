@@ -1,0 +1,68 @@
+---
+title: Installation and configuration of NX server on remote host
+author: Sergey Pogorelov
+date: 2020-04-13
+# hero: ./images/sbt-logo.png
+excerpt: Installation and configuration of NX server on remote host...
+---
+
+## Set password
+```
+sudo passwd ubuntu
+```
+
+## Create dummy virtual display
+```bash
+sudo apt-get install xserver-xorg-video-dummy
+```
+Put the following contents under `sudo vim /etc/X11/xorg.conf`
+```
+Section "Device"
+    Identifier  "Configured Video Device"
+    Driver      "dummy"
+    VideoRam    256000
+EndSection
+Section "Monitor"
+    Identifier  "Configured Monitor"
+    HorizSync 28.0-80.0
+    VertRefresh 48.0-75.0
+    #Modeline "1920x1200_60.00" 172.80 1920 2040 2248 2576 1200 1081 1084 1118 -HSync +Vsync
+    Modeline "1920x1200_60.00" 193.16 1920 2048 2256 2592 1200 1201 1204 1242 -HSync +Vsync
+    Virtual 2880 1800
+EndSection
+Section "Screen"
+    Identifier  "Default Screen"
+    Monitor     "Configured Monitor"
+    Device      "Configured Video Device"
+    DefaultDepth 24
+    SubSection "Display"
+    Depth 24
+    Modes "1920x1200_60.00"
+    Virtual 2880 1800
+    EndSubSection
+EndSection
+```
+
+## Install Desktop Environment
+```
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install ubuntu-desktop 
+```
+
+Reboot `sudo reboot -i`
+
+## Install NX server
+```
+wget https://download.nomachine.com/download/6.9/Linux/nomachine_6.9.2_1_amd64.deb
+sudo dpkg -i nomachine_6.9.2_1_amd64.deb
+mkdir -p ~/.nx/config
+```
+
+## Add your host to authorized clients for NX
+1. Copy `.pub` key from your machine under `~/.nx/config` (you can use `scp`)
+2. Rename your key under `~/.nx/config` to `authorized.crt`
+3. `chmod 600 ~/.nx/config/authorized.crt`
+4. Reboot `sudo reboot -i`
+
+**Now you can connect via NX from your host machine**
