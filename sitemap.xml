@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://pogorelovs.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://pogorelovs.com/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://pogorelovs.com/Installation-and-configuration-of-NX-server-on-remote-host</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://pogorelovs.com/Sbt-assembly-without-tests</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://pogorelovs.com/How-to-debug-JVM-applications-remotely</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://pogorelovs.com/Playing-with-MSK-kafka</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://pogorelovs.com/Simple-local-Nginx</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -8,4 +11,5 @@
 <url> <loc>https://pogorelovs.com/OS-X-environment-setup-guide</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://pogorelovs.com/How-to-become-a-software-developer</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://pogorelovs.com/authors/Sergey-Pogorelov</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://pogorelovs.com/authors/Sergey-Pogorelov/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
