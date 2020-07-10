@@ -2,7 +2,7 @@
 title: Installation and configuration of NX server on remote host
 author: Sergey Pogorelov
 date: 2020-04-13
-# hero: ./images/sbt-logo.png
+hero: ./images/nomachine_logo.jpg
 excerpt: Installation and configuration of NX server on remote host...
 ---
 
@@ -16,7 +16,7 @@ sudo passwd ubuntu
 sudo apt-get install xserver-xorg-video-dummy
 ```
 Put the following contents under `sudo vim /etc/X11/xorg.conf`
-```
+```conf
 Section "Device"
     Identifier  "Configured Video Device"
     Driver      "dummy"
@@ -44,7 +44,7 @@ EndSection
 ```
 
 ## Install Desktop Environment
-```
+```bash
 sudo apt-get update
 sudo apt-get dist-upgrade
 sudo apt-get install ubuntu-desktop 
@@ -53,7 +53,7 @@ sudo apt-get install ubuntu-desktop
 Reboot `sudo reboot -i`
 
 ## Install NX server
-```
+```bash
 wget https://download.nomachine.com/download/6.9/Linux/nomachine_6.9.2_1_amd64.deb
 sudo dpkg -i nomachine_6.9.2_1_amd64.deb
 mkdir -p ~/.nx/config
