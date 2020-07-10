@@ -1,0 +1,114 @@
+---
+title: Unleash - ready to go feature toggle solution
+author: Sergey Pogorelov
+date: 2020-07-10
+hero: ./images/toggle.jpg
+excerpt: Unleash is a feature toggle system that might be set-up in a minutes...
+---
+
+For more information about what __feature toggle__ is - visit [Feature Toggles aka Feature Flags](https://martinfowler.com/articles/feature-toggles.html)
+
+Unleash is a feature toggle system that might be set-up in a minutes!
+In this post, I want to show a quick set-up demo for this powerful tool.
+
+## Prerequisites
+For the infrastructure setup, it's required to have __Docker__ and __docker-compose__.
+For the demo app build it's required to have __Java > 11__ and __Gradle__.
+
+## Prepare the infrastructure
+To run the Unleash server we need to have ```Node.js >= 12 and a PostgreSQL >= 10```
+For the demo purposes let's use docker images of __Unleash__ and __PostgreSQL__.
+
+I've prepared the following `docker-compose.yml`:
+```dockerfile
+version: "3"
+services:
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_DB=unleash
+      - POSTGRES_PASSWORD=${POSTGRES_PASS}
+  unleash:
+    image: unleashorg/unleash-server
+    environment:
+      - DATABASE_URL=postgres://postgres:${POSTGRES_PASS}@postgres:5432/unleash
+    restart: on-failure
+    ports:
+      - "4242:4242"
+```
+
+It'll create both __Postgres__ and __Unleash__ containers and will expose the 4242 port of __Unleash__, so we'll be able to access the Unleash management UI.
+
+Now you can open _localhost:4242_ in your browser and to play with the __Unleash UI__.
+
+<div className="Image__Medium">
+  <img
+    src="./images/unleash_ui.png"
+    title="Unleash UI"
+    alt="Unleash UI"
+  />
+</div>
+
+## Unleash in action
+I've prepared an application that fetches all available toggles from the __Unleash server__ and shows their statuses.
+
+<div className="Image__Medium">
+  <img
+    src="./images/UnleashDemo.gif"
+    title="Unleash demo"
+    alt="Unleash demo"
+  />
+</div>
+
+## Unleash client
+For the moment, the official Unleash client SDKs available for:
+- Java
+- Python
+- Node.js
+- Go
+- Ruby
+- .Net
+
+## Unleash client configuration (Java example)
+The client API is self-descriptive, so I'll just show you the code:
+```java
+var unleashConfig = UnleashConfig.builder()
+        .appName("UnleashDemo")
+        .instanceId("Instance 1")
+        .unleashAPI("http://127.0.0.1:4242/api")
+        .fetchTogglesInterval(10)
+        .subscriber(new UnleashSubscriber() {
+            @Override
+            public void togglesFetched(FeatureToggleResponse toggleResponse) {
+                logger.info("Fetched toggles");
+            }
+
+            @Override
+            public void onError(UnleashException unleashException) {
+                logger.info("Error: {}", unleashException.getMessage());
+            }
+        })
+        .build();
+
+var unleash = new DefaultUnleash(unleashConfig);
+```
+
+Once you created the client, you can just use it like:
+
+```java
+if (unleash.isEnabled("someFeature")) {
+    // someFeature code
+}
+```
+
+## Important places to notice
+Unleash client has the backup mechanism. By default, the client fetches the server every 10 seconds.
+Once the client fetched the toggles it creates the local backup file in the temp directory (can be overridden by specific file).
+
+This means that if the unleash-server becomes unavailable, the unleash-client will still be able to toggle the features based on the values stored in unleash-repo.json.
+
+And here you may face unexpected behavior when you receive outdated information about toggles because your Unleash server is down or something went wrong.
+For better diagnostics of that problem don't forget to add the `onError` subscriber to the unleash client.
+
+## Demo repository
+All client app code and the infrastructure related thigs are available in my [**Unleash demo repository**](https://github.com/sergeioff/UnleashDemo)
